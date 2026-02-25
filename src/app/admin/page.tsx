@@ -393,7 +393,7 @@ export default function AdminPage() {
                             <div className="flex-1 flex flex-col items-center">
                                 <h3 className="text-xl text-bis-gold font-bold mb-4 w-full text-center">FORMAT IMAGE</h3>
                                 {/* Same AR as Grid Card */}
-                                <div className="relative w-64 h-72 border border-white/20 bg-neutral-800 overflow-hidden flex flex-col justify-end shadow-xl">
+                                <div className="relative w-72 aspect-square border border-white/20 bg-neutral-800 overflow-hidden flex flex-col justify-end shadow-xl">
                                     {data.teamMembers[editingImageIndex].image ? (
                                         <div
                                             className="absolute inset-0 w-full h-full pointer-events-none"

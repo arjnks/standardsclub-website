@@ -36,7 +36,7 @@ export const TeamGrid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.05, duration: 0.4 }}
               whileHover={{ scale: 1.05, y: -5, zIndex: 10 }}
-              className="relative group h-72 border border-white/5 bg-neutral-900/30 overflow-hidden flex flex-col justify-end"
+              className="relative group aspect-square border border-white/5 bg-neutral-900/30 overflow-hidden flex flex-col justify-end"
             >
 
               {/* Background Image Layer */}
