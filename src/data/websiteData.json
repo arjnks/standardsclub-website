@@ -1,0 +1,159 @@
+{
+  "teamMembers": [
+    {
+      "name": "Dr. Renold Elson",
+      "role": "MENTOR",
+      "id": "00",
+      "linkedin": "#",
+      "image": ""
+    },
+    {
+      "name": "Akshaya Ashok Nair",
+      "role": "CHAIRPERSON",
+      "id": "01",
+      "linkedin": "#",
+      "image": "/team/Akshaya-ChairPerson.webp",
+      "imageScale": "1",
+      "imagePosition": "50% 100%"
+    },
+    {
+      "name": "Siddharth",
+      "role": "VICE CHAIRPERSON",
+      "id": "02",
+      "linkedin": "#",
+      "image": "/team/Siddharth-ViceChairperson.webp"
+    },
+    {
+      "name": "Krishna Sajeev",
+      "role": "SECRETARY",
+      "id": "03",
+      "linkedin": "#",
+      "image": "/team/Krishna-Secretary.webp"
+    },
+    {
+      "name": "Shreya Sinha",
+      "role": "CO SECRETARY",
+      "id": "04",
+      "linkedin": "#",
+      "image": "/team/Shreya-CoSecretary.webp"
+    },
+    {
+      "name": "Jagrat Shivhare",
+      "role": "EVENTS HEAD",
+      "id": "05",
+      "linkedin": "#",
+      "image": "/team/jagrat-EventsHead.webp"
+    },
+    {
+      "name": "Arjun S",
+      "role": "TECHNICAL HEAD",
+      "id": "06",
+      "linkedin": "#",
+      "image": "/team/Arjun-TechnicalHead.webp"
+    },
+    {
+      "name": "Naveen Chand",
+      "role": "DESIGN HEAD",
+      "id": "07",
+      "linkedin": "#",
+      "image": "/team/naveen-DesignHead.webp",
+      "imageScale": "1",
+      "imagePosition": "50% 20%"
+    },
+    {
+      "name": "Yuvvraaj",
+      "role": "PUBLICITY HEAD",
+      "id": "08",
+      "linkedin": "#",
+      "image": "/team/yuvraj- PublicityHead.webp",
+      "imageScale": "1",
+      "imagePosition": "50% 20%"
+    },
+    {
+      "name": "Ashwin Sharma",
+      "role": "FINANCE HEAD",
+      "id": "09",
+      "linkedin": "#",
+      "image": "/team/Ashwin-FinanceHead.webp",
+      "imageScale": "1",
+      "imagePosition": "50% 100%"
+    },
+    {
+      "name": "Aditya Shaji",
+      "role": "MANAGEMENT HEAD",
+      "id": "10",
+      "linkedin": "#",
+      "image": "/team/Aditya-ManagementHead.webp"
+    },
+    {
+      "name": "Dhanusha Rajesh",
+      "role": "HR HEAD",
+      "id": "11",
+      "linkedin": "#",
+      "image": "/team/Dhanusha-hrHead.webp"
+    },
+    {
+      "name": "Vijay",
+      "role": "EDITORIAL HEAD",
+      "id": "12",
+      "linkedin": "#",
+      "image": "/team/vijay-EditorialHead.webp"
+    },
+    {
+      "name": "Sneha Sabu",
+      "role": "CREATIVE HEAD",
+      "id": "13",
+      "linkedin": "#",
+      "image": ""
+    },
+    {
+      "name": "Afnaan",
+      "role": "PROJECT HEAD",
+      "id": "14",
+      "linkedin": "#",
+      "image": "/team/Afnaan-ProjectHead.webp"
+    },
+    {
+      "name": "Uzma",
+      "role": "DEVELOPMENT HEAD",
+      "id": "15",
+      "linkedin": "#",
+      "image": "/team/Uzma-DevelopmentHead.webp"
+    },
+    {
+      "name": "Nayana K",
+      "role": "OUTREACH HEAD",
+      "id": "16",
+      "linkedin": "#",
+      "image": "/team/Nayana-OutreachHead.webp",
+      "imageScale": "1",
+      "imagePosition": "50% 15%"
+    }
+  ],
+  "events": [
+    {
+      "title": "Creative Ads Competition",
+      "date": "OCTOBER 2024",
+      "description": "Student teams showcased creative advertisements to promote BIS standards. Blending education with entertainment through skits and multimedia.",
+      "tag": "COMPETITION"
+    },
+    {
+      "title": "Standards Unplugged",
+      "date": "SEPTEMBER 2024",
+      "description": "An open forum discussion on the relevance of ISI marks in daily life electronics and consumer goods.",
+      "tag": "SEMINAR"
+    },
+    {
+      "title": "Safety Standards: Helmets",
+      "date": "AUGUST 2026",
+      "description": "IS 4151:2015 Awareness drive. Educating riders on the difference between certified and non-certified protective gear.",
+      "tag": "AWARENESS"
+    },
+    {
+      "title": "test",
+      "date": "TEST",
+      "description": "test",
+      "tag": "TEST"
+    }
+  ]
+}
