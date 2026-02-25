@@ -3,7 +3,7 @@ import "./globals.css";
 import { CadGridBackground } from "@/components/CadGridBackground";
 
 export const metadata: Metadata = {
-  title: "BIS Student Chapter | Standards 2.0",
+  title: "Standards Club VIT",
   description: "Precision. Structure. Excellence.",
 };
 

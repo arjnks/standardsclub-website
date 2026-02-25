@@ -44,7 +44,6 @@ export function Footer() {
             © 2026 BIS STANDARDS CLUB VIT. SYSTEM SECURE.
           </p>
           <p className="text-neutral-600 text-xs font-mono mt-2 md:mt-0 flex gap-4">
-            <span>ENGINEERED BY ARJUN S.</span>
             <a href="/admin" className="hover:text-bis-gold transition-colors underline decoration-white/20 hover:decoration-bis-gold">ADMIN LOGIN</a>
           </p>
         </div>
