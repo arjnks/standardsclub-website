@@ -12,7 +12,8 @@ export const TeamGrid = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.teamMembers) {
-          setTeamMembers(data.teamMembers);
+          const uniqueMembers = data.teamMembers.filter((v: any, i: number, a: any[]) => a.findIndex((t: any) => (t.name === v.name)) === i);
+          setTeamMembers(uniqueMembers);
         }
       });
   }, []);
