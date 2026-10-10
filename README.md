@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VIT Standards Club Website
 
-## Getting Started
+The website for the VIT Standards Club, built with Next.js, React, TypeScript, and Tailwind CSS. The repository includes local website data and Supabase integration for event and team-member records.
 
-First, run the development server:
+- **Source code:** https://github.com/arjnks/standardsclub-website
+- **Live site:** https://standardsclub-website.vercel.app
+
+## Tech stack
+
+- Next.js 16 and React 19
+- TypeScript
+- Tailwind CSS
+- Supabase JavaScript client
+- ESLint
+
+## Project structure
+
+- `src/app/` — Next.js application routes and layouts
+- `src/components/` — reusable UI components
+- `src/data/websiteData.json` — local website content and structured data
+- `src/lib/` — shared application utilities
+- `sync.js` — script that copies local team and event data to Supabase
+
+Check the current source tree before relying on this overview if the project structure changes.
+
+## Run locally
+
+### Requirements
+
+- Node.js compatible with the version of Next.js in `package.json`
+- npm
+
+### Setup
 
 ```bash
+git clone https://github.com/arjnks/standardsclub-website.git
+cd standardsclub-website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The data-management scripts expect a `.env.local` file in the repository root. Configure the Supabase project URL and anon/publishable key required by your setup:
 
-## Learn More
+```dotenv
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+Do not commit `.env.local`, credentials, service-role keys, or other secrets. A key prefixed with `NEXT_PUBLIC_` is exposed to browser code if referenced by client-side code. Configure appropriate Row Level Security (RLS) policies in Supabase.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available commands
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run dev    # Start the local development server
+npm run build  # Build for production
+npm run start  # Start the production server
+npm run lint   # Run ESLint
+```
 
-## Deploy on Vercel
+## Important: review `sync.js` before running it
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The current `sync.js` implementation deletes existing rows from the Supabase `team_members` and `events` tables before inserting replacement data from `src/data/websiteData.json`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Do not run this script against production until you have verified the target Supabase project, backed up the affected tables, and reviewed the deletion and insertion behavior.** The script currently logs insert errors but can still print `Sync Complete!`, so that message should not be treated as proof that every record was synchronized successfully.
+
+Before making this workflow production-safe, confirm the database schema and unique constraints. Prefer a transaction or an idempotent upsert strategy with explicit error handling and a preview/dry-run option. Do not replace the delete-and-reinsert logic with an assumed upsert key until the table constraints have been checked.
+
+## Deployment
+
+The project has been associated with Vercel. Confirm the current Vercel project settings and connected branch before relying on automatic deployments.
+
+## Contributing
+
+1. Create a branch for your change.
+2. Install dependencies with `npm install`.
+3. Run `npm run lint` and `npm run build`.
+4. Open a pull request describing the change and its testing.
